@@ -4,9 +4,11 @@ import joblib
 import pickle
 import pandas as pd
 
-rf_model = joblib.load('rf_model.pkl')
-city_le = joblib.load('city_le.pkl')
-z_le = joblib.load('z_le.pkl')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+rf_model = joblib.load(os.path.join(BASE_DIR, 'rf_model.pkl'))
+city_le = joblib.load(os.path.join(BASE_DIR, 'city_le.pkl'))
+z_le = joblib.load(os.path.join(BASE_DIR, 'z_le.pkl'))
 
 
 def predictions(sqft_living, sqft_lot, city, statezip,
