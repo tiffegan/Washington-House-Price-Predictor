@@ -13,4 +13,4 @@ if st.button("Predict"):
     price = predictions(sqft_living,sqft_lot,city,statezip,sqft_above,yr_built)
     
     st.success("Calculation Complete!")
-    st.write(f"Price:${price:,.2f}")
+    st.write(f"Price: ${price:,.2f}")
